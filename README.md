@@ -67,6 +67,14 @@ RsPermission.getInstance().setiPermissionRequest(new IPermissionRequest() {
                 }
             }).requestPermission(this, Manifest.permission.CAMERA);
 ```
+#必须重写权限回调方法
+```
+@Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        RsPermission.getInstance().onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+```
+
 #参数说明
 
 
