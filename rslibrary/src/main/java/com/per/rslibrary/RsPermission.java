@@ -70,7 +70,7 @@ public class RsPermission {
                 }
 
                 @Override
-                public void cancle() {
+                public void cancle(int REQUEST_CODE, String permission) {
 
                 }
 
@@ -153,11 +153,18 @@ public class RsPermission {
         for (int i = 0; i < permissions.length; i++) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+                    //弹框被拒绝弹起 并且权限被拒绝
                     if (!pActivity.shouldShowRequestPermissionRationale(permissions[i])) {
                         isPerNotShow = true;
                         mNPer.add(permissions[i]);
+                    } else {
+                        //权限被拒绝
+                        if (iPermissionRequest != null) {
+                            iPermissionRequest.cancle(REQUEST_CODE, permissions[i]);
+                        }
                     }
                 } else {
+                    //权限是已有的 成功权限
                     if (iPermissionRequest != null) {
                         try {
                             iPermissionRequest.success(REQUEST_CODE, permissions[i]);

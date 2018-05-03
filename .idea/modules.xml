@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RsPermission.iml" filepath="$PROJECT_DIR$/RsPermission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RsPermission.iml" filepath="$PROJECT_DIR$/.idea/RsPermission.iml" />
+      <module fileurl="file://E:\BaiduNetdiskDownload\PinDuoBao-masters\RsPermission\RsPermission.iml" filepath="E:\BaiduNetdiskDownload\PinDuoBao-masters\RsPermission\RsPermission.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/rslibrary/rslibrary.iml" filepath="$PROJECT_DIR$/rslibrary/rslibrary.iml" />
     </modules>
