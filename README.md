@@ -1,4 +1,6 @@
 # RsPermission
+## 一个权限管理的工具类, 功能不多, 项目所需, 海涵海涵
+
 Project 引用
 ```
 	allprojects {
@@ -15,7 +17,7 @@ Module:app 引用
 	}
 ```
 使用方法示例
-#1:
+# 1:
 ```
 public class BaseActivity extends AppCompatActivity implements IPermissionRequest {
 
@@ -48,7 +50,7 @@ public class BaseActivity extends AppCompatActivity implements IPermissionReques
     }
 }
 ```
-#2
+# 2:
 ```
 RsPermission.getInstance().setiPermissionRequest(new IPermissionRequest() {
                 @Override
@@ -67,7 +69,7 @@ RsPermission.getInstance().setiPermissionRequest(new IPermissionRequest() {
                 }
             }).requestPermission(this, Manifest.permission.CAMERA);
 ```
-#必须重写权限回调方法
+# 必须重写权限回调方法
 ```
 @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -75,7 +77,7 @@ RsPermission.getInstance().setiPermissionRequest(new IPermissionRequest() {
     }
 ```
 
-#参数说明
+# 参数说明
 
 
 参数名 | 备注
