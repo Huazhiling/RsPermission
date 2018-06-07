@@ -192,8 +192,9 @@ public class RsPermission {
         this.REQUEST_CODE = 200;
     }
 
-    public void setRequestCode(int requestCode) {
+    public RsPermission setRequestCode(int requestCode) {
         this.REQUEST_CODE = requestCode;
+        return this;
     }
 
     public AlertDialog.Builder getDialog() {
