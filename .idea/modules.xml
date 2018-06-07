@@ -4,8 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RsPermission.iml" filepath="$PROJECT_DIR$/.idea/RsPermission.iml" />
       <module fileurl="file://E:\BaiduNetdiskDownload\PinDuoBao-masters\RsPermission\RsPermission.iml" filepath="E:\BaiduNetdiskDownload\PinDuoBao-masters\RsPermission\RsPermission.iml" />
+      <module fileurl="file://E:\AndroidApp\RsPermission\.idea\RsPermission.iml" filepath="E:\AndroidApp\RsPermission\.idea\RsPermission.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\AndroidApp\RsPermission\app\app.iml" filepath="E:\AndroidApp\RsPermission\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/rslibrary/rslibrary.iml" filepath="$PROJECT_DIR$/rslibrary/rslibrary.iml" />
+      <module fileurl="file://E:\AndroidApp\RsPermission\rslibrary\rslibrary.iml" filepath="E:\AndroidApp\RsPermission\rslibrary\rslibrary.iml" />
     </modules>
   </component>
 </project>

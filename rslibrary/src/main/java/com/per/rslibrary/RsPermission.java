@@ -29,6 +29,10 @@ public class RsPermission {
     private RsPermission() {
     }
 
+    public int getRequestCode() {
+        return this.REQUEST_CODE;
+    }
+
     public RsPermission setiPermissionRequest(IPermissionRequest iPermissionRequest) {
         this.iPermissionRequest = iPermissionRequest;
         return this;
