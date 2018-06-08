@@ -9,7 +9,7 @@ import android.content.pm.PackageManager;
 public interface IPermissionRequest {
     void toSetting();
 
-    void cancle(int code, String permission);
+    void cancle(int code);
 
-    void success(int code,String... per) throws PackageManager.NameNotFoundException;
+    void success(int code);
 }

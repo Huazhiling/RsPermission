@@ -25,6 +25,7 @@ public class RsPermission {
     private boolean isPerNotShow = false;   //是否有被禁止显示
     private boolean isDialogMsgDefault = true;  //dialog是否显示默认的文字提示
     private IPermissionRequest iPermissionRequest;
+    private boolean isPerExecute = false;
 
     private RsPermission() {
     }
@@ -74,12 +75,12 @@ public class RsPermission {
                 }
 
                 @Override
-                public void cancle(int REQUEST_CODE, String permission) {
+                public void cancle(int REQUEST_CODE) {
 
                 }
 
                 @Override
-                public void success(int code, String... per) {
+                public void success(int code) {
 
                 }
             });
@@ -91,11 +92,7 @@ public class RsPermission {
                 setDefualtDialog(mPermissions);
                 pActivity.requestPermissions(mPs, REQUEST_CODE);
             } else {
-                try {
-                    iPermissionRequest.success(REQUEST_CODE, mPermissions);
-                } catch (PackageManager.NameNotFoundException e) {
-                    e.printStackTrace();
-                }
+                    iPermissionRequest.success(REQUEST_CODE);
             }
         }
         return this;
@@ -164,19 +161,23 @@ public class RsPermission {
                     } else {
                         //权限被拒绝
                         if (iPermissionRequest != null) {
-                            iPermissionRequest.cancle(REQUEST_CODE, permissions[i]);
+                            isPerExecute = false;
+                            break;
                         }
                     }
                 } else {
                     //权限是已有的 成功权限
                     if (iPermissionRequest != null) {
-                        try {
-                            iPermissionRequest.success(REQUEST_CODE, permissions[i]);
-                        } catch (PackageManager.NameNotFoundException e) {
-                            e.printStackTrace();
-                        }
+                            isPerExecute = true;
                     }
                 }
+            }
+        }
+        if(permissions.length != 0 ){
+            if (!isPerExecute){
+                iPermissionRequest.cancle(REQUEST_CODE);
+            }else{
+                iPermissionRequest.success(REQUEST_CODE);
             }
         }
         //有被点击不让询问的弹框
