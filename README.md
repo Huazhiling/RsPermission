@@ -13,7 +13,7 @@ Project 引用
 Module:app 引用
 ```
 	dependencies {
-	        implementation 'com.github.Huazhiling:RsPermission:v1.0.1'
+	        implementation 'com.github.Huazhiling:RsPermission:v1.0.7'
 	}
 ```
 使用方法示例
